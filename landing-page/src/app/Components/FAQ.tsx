@@ -1,44 +1,43 @@
 import React from "react";
+import FAQItem from "./ui/FAQItem";
 import Badge from "./ui/Badge";
 import SectionTitle from "./ui/SectionTitle";
-import FAQItem from "./ui/FAQItem";
 
-const faqItems = [
+const faqData = [
   {
-    question: "Is it accessible?",
-    answer: "Yes, our templates are designed with accessibility in mind to ensure they are usable by everyone."
+    question: "Is the landing page template free?",
+    answer:
+      "Yes, our landing page template is completely free to use. It's designed to help developers quickly launch their projects without compromising on quality or performance.",
   },
   {
-    question: "Is it styled?",
-    answer: "Yes, our templates come with modern and clean styles that you can easily customize."
+    question: "Does the template use Next.js?",
+    answer:
+      "Absolutely! Our template is built using Next.js, leveraging its server-side rendering capabilities for faster page loads and improved SEO. This makes our template ideal for projects that need quick scalability and robust performance.",
   },
   {
-    question: "Is it animated?",
-    answer: "Yes. It's animated by default, but you can disable it if you prefer."
-  }
+    question: "Is there a Figma file available for the template?",
+    answer:
+      "Yes, we provide a Figma file with the template. This allows you to easily customize the design to fit your specific needs before diving into the development process. The Figma file is structured to be intuitive for both designers and developers.",
+  },
 ];
 
-const FAQ: React.FC = () => {
+const FAQSection: React.FC = () => {
   return (
-    <section className="w-full px-4 py-16 bg-white">
-      <div className="container mx-auto flex flex-col items-center gap-12">
-        <Badge text="FAQ" />
+    <div className="max-w-[800px] mx-auto p-4">
+      <div className="flex flex-col items-center gap-3">
+        <Badge text="FAQs" />
         <SectionTitle
           title="Frequently Asked Questions"
-          description="Discover the benefits of our Next.js landing page template, designed to help you launch quickly and effectively."
+          description="Get quick answers to common questions about our free Next.js landing page template and resources."
         />
-        <div className="self-stretch pl-10 pr-6 py-6 flex flex-col justify-start items-start gap-6 bg-white rounded-lg shadow-md">
-          {faqItems.map((item, index) => (
-            <FAQItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-            />
-          ))}
-        </div>
       </div>
-    </section>
+      <div className="mt-4">
+        {faqData.map((faq, index) => (
+          <FAQItem key={index} question={faq.question} answer={faq.answer} />)
+        )}
+      </div>
+    </div>
   );
 };
 
-export default FAQ;
+export default FAQSection;

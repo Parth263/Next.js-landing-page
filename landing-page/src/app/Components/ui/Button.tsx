@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 interface ButtonProps {
   text: string;
-  variant: 'primary' | 'secondary' | 'outline';
+  variant: 'primary' | 'secondary' | 'outline' | 'cta';
   size: 'small' | 'medium' | 'large';
   iconUrl?: string;
   className?: string;
@@ -21,12 +21,13 @@ const Button: React.FC<ButtonProps> = ({
   const variantStyles = {
     primary: 'bg-teal-700 hover:bg-teal-800 text-white',
     secondary: 'text-emerald-600 hover:text-emerald-700 bg-transparent',
-    outline: 'bg-white border border-neutral-500 text-neutral-500 hover:bg-gray-50'
+    outline: 'bg-white border border-neutral-500 text-neutral-500 hover:bg-gray-50',
+    cta: 'bg-blue-600 hover:bg-blue-700 text-white' // New CTA variant
   };
 
   const sizeStyles = {
-    small: 'px-2 py-1 text-sm',
-    medium: 'px-4 py-3 text-md',
+    small: 'px-2 py-2 text-sm',
+    medium: 'px-5 py-3 text-sm',
     large: 'px-6 py-3 text-lg'
   };
 
@@ -43,4 +44,3 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
-

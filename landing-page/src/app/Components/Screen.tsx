@@ -5,7 +5,7 @@ const Screen: React.FC = () => {
     <div className="container mx-auto px-4 py-12">
       <VideoScreen
         thumbnailSrc="/Dashboard.png"
-        videoSrc="https://www.youtube.com/embed/your-video-id"
+        videoSrc="https://www.youtube.com/embed/OdQrlp3uYQM"
         alt="Dashboard preview"
       />
     </div>
