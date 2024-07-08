@@ -24,7 +24,7 @@ const steps = [
 
 const Workflow: React.FC = () => {
   return (
-    <div className="flex flex-col items-center gap-6 mx-auto max-w-5xl py-12 px-4">
+    <div className="flex flex-col items-center gap-3 mx-auto max-w-5xl py-12 px-4">
       <div className="flex flex-col items-center gap-2.5">
         <Badge text="Steps" />
         <SectionTitle 
@@ -32,7 +32,7 @@ const Workflow: React.FC = () => {
         description="Simple and easy Steps to Launch Your Landing Page quickly"
         />
       </div>
-      <div className="flex flex-col md:flex-row gap-3 items-center">
+      <div className="flex flex-col md:flex-row gap-3 items-center -ml-32 px-12">
         <div className="w-full md:w-2/3 flex justify-center">
           <Image src="/Image wrapper.svg" alt="Workflow illustration" width={1200} height={1200} />
         </div>

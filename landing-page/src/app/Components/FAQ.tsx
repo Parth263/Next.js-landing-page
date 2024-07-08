@@ -23,7 +23,7 @@ const faqData = [
 
 const FAQSection: React.FC = () => {
   return (
-    <div className="max-w-[800px] mx-auto p-4">
+    <div id="faq" className="max-w-[800px] mx-auto p-4 py-16">
       <div className="flex flex-col items-center gap-3">
         <Badge text="FAQs" />
         <SectionTitle

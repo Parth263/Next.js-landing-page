@@ -22,11 +22,17 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const menuItems = ["Home", "Features", "Testimonials", "Pricing", "FAQ"];
+  const menuItems = [
+    { name: "Home", href: "#home" },
+    { name: "Features", href: "#features" },
+    { name: "Pricing", href: "#pricing" },
+    { name: "Testimonials", href: "#testimonials" },
+    { name: "FAQ", href: "#faq" },
+  ];
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-white shadow-sm">
-      <nav className="max-w-[1200px] mx-auto px-2 py-4">
+    <div className="w-full bg-white shadow-sm">
+      <nav className="max-w-[1200px] mx-auto px-2 py-2">
         <div className="flex justify-between items-center">
           <div className="flex items-center justify-center">
             <Image src="/logo2.svg" alt="logo" width={140} height={140} priority />
@@ -34,8 +40,8 @@ const Navbar: React.FC = () => {
 
           <div className="hidden md:flex gap-12 ml-20 items-center justify-center">
             {menuItems.map((item) => (
-              <NavItem key={item} href={`#${item.toLowerCase()}`}>
-                {item}
+              <NavItem key={item.name} href={item.href}>
+                {item.name}
               </NavItem>
             ))}
           </div>
@@ -68,8 +74,8 @@ const Navbar: React.FC = () => {
           <div className="md:hidden mt-4 z-50">
             <div className="flex flex-col gap-4 items-center">
               {menuItems.map((item) => (
-                <NavItem key={item} href={`#${item.toLowerCase()}`}>
-                  {item}
+                <NavItem key={item.name} href={item.href}>
+                  {item.name}
                 </NavItem>
               ))}
             </div>

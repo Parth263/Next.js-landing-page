@@ -13,10 +13,10 @@ import Footer from './Components/Footer'
 function Page() {
   return (
     <div className="min-h-screen flex flex-col items-center">
-      <div className="w-full">
+      <div className="w-full sticky top-0 z-50">
         <Navbar />
       </div>
-      <main className="flex-grow w-full max-w-[1200px]">
+      <main className="flex-grow w-full">
         <Hero />
         <Screen />
         <Features />

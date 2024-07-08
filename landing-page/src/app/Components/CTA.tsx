@@ -8,22 +8,20 @@ const CTA = () => {
   };
 
   return (
-
-      <div className="container mx-auto max-w-[1280px] bg-blue-50 py-10 mt-28 flex flex-col items-center px-8 sm:px-20 md:px-56">
-        <div className="flex w-full justify-between items-center">
-          <h2 className="text-blue-600 text-3xl font-bold leading-10">
-            Get it for Free Right Now!
-          </h2>
-          <Button
+    <div className="container mx-auto max-w-[1280px] bg-blue-50 py-10 mt-12 flex flex-col items-center px-8 sm:px-20 md:px-56">
+      <div className="flex w-full justify-between items-center ml-10">
+        <h2 className="text-blue-600 text-3xl font-bold leading-10">
+          Get it for Free Right Now!
+        </h2>
+        <Button
           text="Get it for Free"
           variant="cta"
           size="medium"
           className="rounded-lg font-bold"
           onClick={handleClick}
         />
-        </div>
       </div>
-
+    </div>
   );
 };
 

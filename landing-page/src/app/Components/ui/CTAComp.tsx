@@ -9,7 +9,7 @@ const CTAComp: React.FC<CTAProps> = ({ buttonText, onButtonClick }) => {
     return (
         <div className="max-w-[1280px] mx-auto py-14 bg-violet-100 flex flex-col items-start gap-2.5 px-8 sm:px-20 md:px-40">
             <div className="flex w-full justify-between items-center">
-                <h2 className="text-slate-800 text-[33px] font-bold leading-10">
+                <h2 className="text-slate-800 text-2xl font-bold leading-10">
                     Get it Right Now?
                 </h2>
                 <button 

@@ -4,96 +4,97 @@ import React, { useState } from "react";
 import SectionTitle from "./ui/SectionTitle";
 import PricingCard from "./ui/PricingCard";
 import ToggleSwitch from "./ui/ToggleSwitch";
+import Badge from "./ui/Badge";
 
 const pricingPlans = {
   monthly: [
     {
       planName: "Free",
       price: "$0",
-      duration: "One time purchase",
+      duration: "month",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: false },
+        { text: "Free updates", available: false },
+        { text: "24/7 support", available: false },
       ],
-      buttonText: "Get started for free"
+      buttonText: "Get started for free",
     },
     {
       planName: "Pro",
-      price: "$29",
-      duration: "Per month",
+      price: "$19",
+      duration: "month",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: true },
+        { text: "Free updates", available: true },
+        { text: "24/7 support", available: false },
       ],
-      buttonText: "Get started for free"
+      buttonText: "Get started",
     },
     {
       planName: "Premium",
-      price: "$49",
-      duration: "Per month",
+      price: "$39",
+      duration: "month",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: true },
+        { text: "Free updates", available: true },
+        { text: "24/7 support", available: true },
       ],
-      buttonText: "Get started for free"
-    }
+      buttonText: "Get started",
+    },
   ],
   yearly: [
     {
       planName: "Free",
       price: "$0",
-      duration: "One time purchase",
+      duration: "year",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: false },
+        { text: "Free updates", available: false },
+        { text: "24/7 support", available: false },
       ],
-      buttonText: "Get started for free"
+      buttonText: "Get started for free",
     },
     {
       planName: "Pro",
-      price: "$261", // Discounted price for yearly plan
-      duration: "Per year",
+      price: "$49",
+      duration: "year",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: true },
+        { text: "Free updates", available: true },
+        { text: "24/7 support", available: false },
       ],
-      buttonText: "Get started for free"
+      buttonText: "Get started",
     },
     {
       planName: "Premium",
-      price: "$441", // Discounted price for yearly plan
-      duration: "Per year",
+      price: "$69",
+      duration: "year",
       features: [
-        "Customizable figma files",
-        "Copywriting cheatcodes",
-        "High-quality images",
-        "SEO optimized",
-        "Free updates",
-        "24/7 support"
+        { text: "Customizable figma files", available: true },
+        { text: "Copywriting cheatcodes", available: true },
+        { text: "High-quality images", available: true },
+        { text: "SEO optimized", available: true },
+        { text: "Free updates", available: true },
+        { text: "24/7 support", available: true },
       ],
-      buttonText: "Get started for free"
-    }
-  ]
+      buttonText: "Get started",
+    },
+  ],
 };
 
 const Pricing: React.FC = () => {
@@ -104,15 +105,19 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <section className="w-full px-4 py-16 bg-emerald-50">
-      <div className="container mx-auto flex flex-col items-center gap-12">
+    <section id="pricing" className="bg-emerald-50 mt-24">
+      <div className="container max-w-[1280px] py-16 px-4 mx-auto flex flex-col items-center gap-3">
+        <Badge text="Pricing" bgColor="bg-white" />
         <SectionTitle
           title="Pricing and Plans"
           description="Unlock the potential of our LaunchPage landing page template with versatile pricing plans tailored to your needs."
         />
-        <ToggleSwitch onToggle={handleToggle} isMonthly={isMonthly} />
-        <div className="flex justify-center gap-8 flex-wrap">
-          {pricingPlans[isMonthly ? 'monthly' : 'yearly'].map((plan, index) => (
+        <div className="mb-10 -mt-4">
+          <ToggleSwitch onToggle={handleToggle} isMonthly={isMonthly} />
+        </div>
+
+        <div  className="flex justify-center gap-8 flex-wrap">
+          {pricingPlans[isMonthly ? "monthly" : "yearly"].map((plan, index) => (
             <PricingCard
               key={index}
               planName={plan.planName}

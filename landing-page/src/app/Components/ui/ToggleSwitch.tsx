@@ -1,30 +1,35 @@
-import React from "react";
+import React from 'react';
 
 interface ToggleSwitchProps {
-  onToggle: () => void;
   isMonthly: boolean;
+  onToggle: () => void;
 }
 
-const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ onToggle, isMonthly }) => {
+const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ isMonthly, onToggle }) => {
   return (
-    <div className="w-[334px] h-[34px] relative">
-      <div className={`w-[72px] h-[33px] absolute transition-all duration-300 ${isMonthly ? 'left-0' : 'left-[86px]'} top-0`}>
-        <div className="w-full h-full opacity-20 bg-gray-900 rounded-2xl" />
-        <div className="absolute left-[7px] top-[6px] w-[21px] h-[21px] bg-white rounded-full" />
-      </div>
-      <div className="absolute left-[2px] top-[2px] text-right text-gray-900 text-[19px] font-normal leading-loose cursor-pointer" onClick={onToggle}>
+    <div className="flex items-center gap-2">
+      <span className={`text-md font-normal ${isMonthly ? 'text-blue-600' : 'text-gray-900'}`}>
         Monthly
+      </span>
+      <div
+        onClick={onToggle}
+        className={`relative w-12 h-6 rounded-full cursor-pointer ${
+          isMonthly ? 'bg-gray-200' : 'bg-blue-600'
+        }`}
+      >
+        <div
+          className={`absolute top-0.5 w-5 h-5 rounded-full transition-transform ${
+            isMonthly
+              ? 'bg-white transform translate-x-1'
+              : 'bg-white transform translate-x-6'
+          }`}
+        ></div>
       </div>
-      <div className="absolute left-[174px] top-[2px] text-gray-900 text-[19px] font-normal leading-loose cursor-pointer" onClick={onToggle}>
+      <span className={`text-md font-normal ${isMonthly ? 'text-gray-900' : 'text-blue-600'}`}>
         Yearly
-      </div>
-      <div className="absolute left-[239px] top-[3px] w-[95px] h-[29px] justify-center items-center inline-flex">
-        <div className="relative flex-col justify-start items-start flex">
-          <div className="w-full h-full opacity-10 bg-blue-600 rounded-[14.50px]" />
-          <div className="absolute inset-0 flex justify-center items-center text-center text-blue-600 text-[13px] font-bold uppercase tracking-widest">
-            Save 25%
-          </div>
-        </div>
+      </span>
+      <div className="text-blue-600 bg-blue-50 border border-blue-300 rounded-full px-2 py-1 text-[10px] font-semibold uppercase font-lato tracking-widest ml-2">
+        Save 25%
       </div>
     </div>
   );

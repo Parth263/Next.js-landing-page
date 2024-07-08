@@ -5,35 +5,35 @@ import TestimonialCard from "./ui/TestimonialCard";
 
 const testimonials = [
   {
-    image: "https://via.placeholder.com/54x54",
-    quote: "“You made it so simple. My new site is so much faster and easier to work with than my old site.”",
+    image: "Oval.svg",
+    quote: "LaunchPage has completely transformed our product launch process. The intuitive design and powerful features allowed us to create a stunning landing page in record time. Our conversion rates have skyrocketed.",
     name: "Isabella Chavez",
-    title: "Graphic Designer",
+    title: "Director of Marketing, TechNova Inc.",
   },
   {
-    image: "https://via.placeholder.com/54x54",
-    quote: "“The template is great, it saved me a lot of time and effort.”",
+    image: "Oval2.svg",
+    quote: "As a solo entrepreneur, I was struggling to create a professional-looking website that truly represented my brand. LaunchPage came to the rescue with its user-friendly interface and customizable components. I was able to launch my product in just two days.",
     name: "John Doe",
-    title: "Web Developer",
+    title: "Founder, EcoSmart Solutions",
   },
   {
-    image: "https://via.placeholder.com/54x54",
-    quote: "“Fantastic product, I'm very happy with the results!”",
+    image: "Oval3.svg",
+    quote: "I've used numerous landing page builders in my career, but LaunchPage stands head and shoulders above the rest. The attention to detail in design, the seamless integration with our existing tools.",
     name: "Jane Smith",
-    title: "Entrepreneur",
+    title: "CMO, GlobalTech Innovations",
   },
 ];
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="w-full px-4 py-16">
-      <div className="container mx-auto flex flex-col items-center gap-3">
+    <section id="testimonials" className="w-full px-4 py-16 bg-white">
+      <div className="container mx-auto flex flex-col items-center gap-4">
         <Badge text="Testimonials" />
         <SectionTitle
           title="What Our Users Are Saying"
           description="Discover how our LaunchPage template has transformed the way businesses launch their products."
         />
-        <div className="flex justify-center gap-14 flex-wrap">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-2">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard
               key={index}

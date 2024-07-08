@@ -23,7 +23,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       </button>
       {isOpen && (
         <div className="mt-2 overflow-hidden">
-          <p className="text-slate-900 text-base font-medium break-words">
+          <p className="text-gray-600 text-sm font-inter font-medium break-words">
             {answer}
           </p>
         </div>
