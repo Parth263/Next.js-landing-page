@@ -47,16 +47,8 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button
-              text="Log In"
-              variant="secondary"
-              size="medium"
-            />
-            <Button 
-            text="Get it for Free" 
-            variant="primary" 
-            size="medium" 
-            />
+            <Button text="Log In" variant="secondary" size="medium" />
+            <Button text="Get it for Free" variant="primary" size="medium" />
           </div>
 
           <div className="md:hidden">
@@ -71,17 +63,19 @@ const Navbar: React.FC = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 z-50">
-            <div className="flex flex-col gap-4 items-center">
-              {menuItems.map((item) => (
-                <NavItem key={item.name} href={item.href}>
-                  {item.name}
-                </NavItem>
-              ))}
-            </div>
-            <div className="mt-4 flex flex-col gap-4 items-center">
-              <Button text="Log In" variant="secondary" size="small" />
-              <Button text="Get it Free" variant="primary" size="medium" />
+          <div className="md:hidden mt-4 z-50 relative">
+            <div className="absolute top-0 left-0 w-full bg-white shadow-sm z-50">
+              <div className="flex flex-col gap-4 items-center p-4">
+                {menuItems.map((item) => (
+                  <NavItem key={item.name} href={item.href}>
+                    {item.name}
+                  </NavItem>
+                ))}
+              </div>
+              <div className="mt-4 flex flex-col gap-4 items-center p-4">
+                <Button text="Log In" variant="secondary" size="small" />
+                <Button text="Get it Free" variant="primary" size="medium" />
+              </div>
             </div>
           </div>
         )}

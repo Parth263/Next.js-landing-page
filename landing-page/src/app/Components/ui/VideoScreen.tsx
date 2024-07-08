@@ -27,8 +27,8 @@ const VideoScreen: React.FC<VideoScreenProps> = ({
             <Image
               src={thumbnailSrc}
               alt={alt}
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: 'cover' }}
               className="mix-blend-color-burn"
             />
           </div>

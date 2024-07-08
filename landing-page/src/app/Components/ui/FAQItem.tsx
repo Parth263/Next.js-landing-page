@@ -12,7 +12,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div className="w-[360px]  md:w-[800px] py-4 border-b border-gray-200">
+    <div className="w-[345px] md:w-[800px] py-4 border-b border-gray-200">
       <button className="flex justify-between items-center w-full" onClick={toggle}>
         <h3 className="text-slate-800 text-md font-semibold text-left">{question}</h3>
         <div className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>

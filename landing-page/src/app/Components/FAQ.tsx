@@ -23,7 +23,7 @@ const faqData = [
 
 const FAQSection: React.FC = () => {
   return (
-    <div id="faq" className="max-w-[800px] mx-auto p-4 py-16">
+    <div id="faq" className="max-w-[800px] mx-auto p-4 py-16 items-center">
       <div className="flex flex-col items-center gap-3">
         <Badge text="FAQs" />
         <SectionTitle
@@ -31,7 +31,7 @@ const FAQSection: React.FC = () => {
           description="Get quick answers to common questions about our free Next.js landing page template and resources."
         />
       </div>
-      <div className="mt-4 px-4">
+      <div className="mt-4 px-2">
         {faqData.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />)
         )}

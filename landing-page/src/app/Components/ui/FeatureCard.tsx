@@ -16,7 +16,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       <img src={iconUrl} alt={`${title} icon`} className="w-6 h-6" />
     </div>
     <div className="flex flex-col gap-2">
-      <div className="text-gray-900 text-[23px] font-bold">{title}</div>
+      <div className="text-gray-900 md:text-2xl text-xl font-bold">{title}</div>
       <div className="text-slate-600 text-base font-medium">{description}</div>
     </div>
   </div>
