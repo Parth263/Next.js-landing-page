@@ -28,7 +28,6 @@ const Hero: React.FC = () => {
           variant="outline"
           size="medium"
           iconUrl="/playVector.svg"
-          onClick={handlePlay}
         />
       </div>
     </section>
