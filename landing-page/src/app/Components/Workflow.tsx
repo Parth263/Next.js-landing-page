@@ -32,11 +32,11 @@ const Workflow: React.FC = () => {
         description="Simple and easy Steps to Launch Your Landing Page quickly"
         />
       </div>
-      <div className="flex flex-col md:flex-row gap-3 items-center -ml-32 px-12">
-        <div className="w-full md:w-2/3 flex justify-center">
+      <div className="flex flex-col md:flex-row gap-4 items-center md:-ml-32 md:px-12 px-4">
+        <div className="w-full md:w-2/3 flex justify-center ">
           <Image src="/Image wrapper.svg" alt="Workflow illustration" width={1200} height={1200} />
         </div>
-        <div className="relative w-full md:w-1/3 flex flex-col">
+        <div className="relative w-full md:w-1/3 flex flex-col -mr-10 mt-10 md:mr-0 md:mt-0">
           {steps.map((step) => (
             <StepCard
               key={step.number}

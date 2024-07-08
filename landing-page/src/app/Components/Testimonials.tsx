@@ -30,7 +30,7 @@ const Testimonials: React.FC = () => {
       <div className="container mx-auto flex flex-col items-center gap-4">
         <Badge text="Testimonials" />
         <SectionTitle
-          title="What Our Users Are Saying"
+          title="What Users Are Saying"
           description="Discover how our LaunchPage template has transformed the way businesses launch their products."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-2">

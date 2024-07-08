@@ -105,7 +105,7 @@ const Pricing: React.FC = () => {
   };
 
   return (
-    <section id="pricing" className="bg-emerald-50 mt-24">
+    <section id="pricing" className="bg-emerald-50 md:mt-24 mt-8">
       <div className="container max-w-[1280px] py-16 px-4 mx-auto flex flex-col items-center gap-3">
         <Badge text="Pricing" bgColor="bg-white" />
         <SectionTitle

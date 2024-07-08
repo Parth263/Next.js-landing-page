@@ -20,15 +20,15 @@ const VideoScreen: React.FC<VideoScreenProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[1181px] h-[300px] md:h-[600px] border-4 border-emerald-100 relative rounded-3xl overflow-hidden mx-auto">
+    <div className="w-full max-w-[1181px] h-[280px] md:h-[600px] border-4 border-emerald-100 relative rounded-3xl overflow-hidden mx-auto">
       {!isPlaying ? (
         <>
-          <div className=" w-full h-full">
+          <div className="w-full h-full relative">
             <Image
               src={thumbnailSrc}
               alt={alt}
-              width={1200}
-              height={720}
+              layout="fill"
+              objectFit="cover"
               className="mix-blend-color-burn"
             />
           </div>

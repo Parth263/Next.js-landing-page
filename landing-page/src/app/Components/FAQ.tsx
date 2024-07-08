@@ -31,7 +31,7 @@ const FAQSection: React.FC = () => {
           description="Get quick answers to common questions about our free Next.js landing page template and resources."
         />
       </div>
-      <div className="mt-4">
+      <div className="mt-4 px-4">
         {faqData.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />)
         )}
