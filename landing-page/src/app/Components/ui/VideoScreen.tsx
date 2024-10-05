@@ -20,7 +20,7 @@ const VideoScreen: React.FC<VideoScreenProps> = ({
   };
 
   return (
-    <div className="w-full max-w-[1180px] h-[400px] md:h-[800px] border-4 border-emerald-100 shadow-md relative rounded-xl overflow-visible mx-auto">
+    <div className="w-full max-w-[1180px] h-[400px] md:h-[800px] border-2 border-teal-50 shadow-md relative rounded-xl overflow-visible mx-auto">
       {!isPlaying ? (
         <>
           <div className="w-full h-full relative">
