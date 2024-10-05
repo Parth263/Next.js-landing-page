@@ -42,7 +42,7 @@ const features = [
 
 const Features: React.FC = () => {
   return (
-    <div id="features" className="flex flex-col items-center gap-3 mx-auto max-w-[1280px] py-16 px-4">
+    <div id="features" className="flex flex-col items-center gap-4 mx-auto max-w-[1280px] py-16 px-4">
       <Badge text="Features" />
       <SectionTitle
         title="Attractive & Easy-to-Use"

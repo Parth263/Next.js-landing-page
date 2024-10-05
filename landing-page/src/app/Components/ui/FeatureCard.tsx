@@ -11,8 +11,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   description,
   iconUrl,
 }) => (
-  <div className="w-full p-6 bg-emerald-50 rounded-xl flex flex-col justify-start items-start gap-5 hover:shadow-md">
-    <div className="p-3 bg-emerald-500 rounded-full flex items-center justify-center">
+  <div className="w-full p-6 bg-teal-50 rounded-xl flex flex-col justify-start items-start gap-6 hover:shadow-md">
+    <div className="p-3 bg-teal-600 rounded-full flex items-center justify-center">
       <img src={iconUrl} alt={`${title} icon`} className="w-6 h-6" />
     </div>
     <div className="flex flex-col gap-2">

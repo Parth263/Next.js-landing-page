@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="w-full bg-white shadow-sm">
-      <nav className="max-w-[1200px] mx-auto px-4 md:px-2 py-2">
+      <nav className="max-w-[1200px] mx-auto px-4 md:px-2 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center justify-center">
             <Image src="/logo2.svg" alt="logo" width={140} height={140} priority />

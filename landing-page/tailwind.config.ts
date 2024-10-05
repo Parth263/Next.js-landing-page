@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-dm-sans)'],
       },
+      colors: {
+        "emerald-25": "#f0fdfa",
+      }
     },
   },
   plugins: [],

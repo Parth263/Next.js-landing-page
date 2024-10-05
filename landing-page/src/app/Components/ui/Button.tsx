@@ -19,9 +19,9 @@ const Button: React.FC<ButtonProps> = ({
   onClick
 }) => {
   const variantStyles = {
-    primary: 'bg-teal-700 hover:bg-teal-800 text-white',
-    secondary: 'text-emerald-600 hover:text-emerald-700 bg-transparent',
-    outline: 'bg-white border border-neutral-500 text-neutral-500 hover:bg-gray-50',
+    primary: 'bg-teal-700 hover:bg-teal-800 text-white shadow-md shadow-teal-100',
+    secondary: 'text-teal-600 hover:text-teal-700 bg-transparent',
+    outline: 'bg-white border border-neutral-300 text-neutral-500 hover:bg-gray-50',
     cta: 'bg-blue-600 hover:bg-blue-700 text-white' // New CTA variant
   };
 

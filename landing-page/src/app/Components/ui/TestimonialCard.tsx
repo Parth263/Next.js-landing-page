@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({ image, quote, name, title }) => {
   return (
-    <article className="w-full max-w-[323px] h-[400px] p-6 bg-emerald-50 rounded-[10px] border border-emerald-50 flex flex-col justify-between gap-6 transition-shadow hover:shadow-md">
+    <article className="w-full max-w-[323px] h-[400px] p-6 bg-emerald-25 rounded-[10px] border border-emerald-100 flex flex-col justify-between gap-6 transition-shadow hover:shadow-md">
       <img 
         className="w-16 h-16 rounded-full object-cover" 
         src={image} 

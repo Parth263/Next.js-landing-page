@@ -7,9 +7,9 @@ interface BadgeProps {
   className?: string; 
 }
 
-const Badge: React.FC<BadgeProps> = ({ text, bgColor = "bg-emerald-50", className = "" }) => {
+const Badge: React.FC<BadgeProps> = ({ text, bgColor = "bg-teal-50", className = "" }) => {
   return (
-    <div className={`${bgColor} border border-emerald-300 rounded-full px-4 py-2 inline-flex items-center ${className}`}>
+    <div className={`${bgColor} border border-teal-200 shadow-md shadow-teal-100 rounded-full px-4 py-2 mb-4 inline-flex items-center ${className}`}>
       <Image
         src="/AI Generate A lined.svg"
         alt="Badge icon"

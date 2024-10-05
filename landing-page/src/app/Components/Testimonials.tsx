@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="w-full px-4 py-16 bg-white">
+    <section id="testimonials" className="w-full px-4 py-20 bg-white">
       <div className="container mx-auto flex flex-col items-center gap-4">
         <Badge text="Testimonials" />
         <SectionTitle
